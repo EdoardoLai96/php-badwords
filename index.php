@@ -3,16 +3,15 @@
 
     $lunghezzaParIniziale = strlen($parIniziale);
 
-    $Censura = "***";
 
-    $parolaCensurata = $_GET["parolaCensurata"];
+    $parolaCensurata = $_GET['censura'];
 
 
-    $parCensurato = str_replace($parolaCensurata,$Censura,$parIniziale)
+    $parCensurato = str_replace($parolaCensurata, '***' ,$parIniziale);
 
     
 ?>
 
 <h1> <?php echo $parIniziale ?> </h1>
 <h2>La lunghezza di questo paragrafo è di <?php echo($lunghezzaParIniziale) ?> caratteri </h2>
-<h2> <?php echo($parCensurato) ?> </h2>
+<h2> <?php echo $parCensurato ?> </h2>
